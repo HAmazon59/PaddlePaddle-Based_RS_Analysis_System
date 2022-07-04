@@ -1,0 +1,63 @@
+Model: DeepLabV3P
+Transforms:
+- Resize:
+    interp: LINEAR
+    keep_ratio: false
+    target_size: !!python/tuple
+    - 1488
+    - 1488
+- Normalize:
+    max_val:
+    - 255.0
+    - 255.0
+    - 255.0
+    mean:
+    - 0.5
+    - 0.5
+    - 0.5
+    min_val:
+    - 0
+    - 0
+    - 0
+    std:
+    - 0.5
+    - 0.5
+    - 0.5
+_Attributes:
+  best_accuracy: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - f8
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - -1
+    - -1
+    - 0
+  - !!binary |
+    4hE6nS3X6D8=
+  best_model_epoch: 99
+  eval_metrics:
+    miou: 0.7762668677174214
+  fixed_input_shape:
+  - -1
+  - 3
+  - -1
+  - -1
+  in_channels: null
+  labels:
+  - background
+  - road
+  model_type: segmenter
+  num_classes: 2
+_init_params:
+  num_classes: 2
+  use_mixed_loss: false
+completed_epochs: 0
+status: Infer
+version: develop
